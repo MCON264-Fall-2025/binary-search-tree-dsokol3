@@ -46,11 +46,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(node == null) {
             return;
         }
-        else{
-            out.add(node.value);
-            preorderRecursive(node.left, out);
-            preorderRecursive(node.right, out);
-        }
+        out.add(node.value);
+        preorderRecursive(node.left, out);
+        preorderRecursive(node.right, out);
     }
 
     public List<T> inorderRecursive() {
@@ -127,7 +125,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
             case INORDER: return inorderRecursive();
             case POSTORDER: return postorderRecursive();
             case LEVEL_ORDER: return levelOrder();
+            default:
+                throw new IllegalArgumentException("Unsupported traversal type: " + type);
         }
-        return new ArrayList<>(); // placeholder
     }
 }
