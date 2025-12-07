@@ -6,6 +6,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
 public class BinarySearchTree<T extends Comparable<T>> {
 
     private TreeNode<T> root;
@@ -43,7 +44,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     private void preorderRecursive(TreeNode<T> node, List<T> out) {
         // TODO: implement Preorder: Root -> Left -> Right
         // hint: check for null, then visit node, then recurse on left and right
-        if(node == null) {
+        if (node == null) {
             return;
         }
         out.add(node.value);
@@ -99,10 +100,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
         Queue<TreeNode<T>> queue = new LinkedList<>();
         queue.add(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode<T> node = queue.poll();
             result.add(node.value);
-            if(node.left!=null){
+            if (node.left != null) {
                 queue.add(node.left);
             }
             if (node.right != null) {
@@ -121,10 +122,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
 //                throw new IllegalArgumentException("Not implemented yet");
 //        };
         switch (type) {
-            case PREORDER: return preorderRecursive();
-            case INORDER: return inorderRecursive();
-            case POSTORDER: return postorderRecursive();
-            case LEVEL_ORDER: return levelOrder();
+            case PREORDER:
+                return preorderRecursive();
+            case INORDER:
+                return inorderRecursive();
+            case POSTORDER:
+                return postorderRecursive();
+            case LEVEL_ORDER:
+                return levelOrder();
             default:
                 throw new IllegalArgumentException("Unsupported traversal type: " + type);
         }
