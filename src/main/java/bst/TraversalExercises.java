@@ -1,6 +1,10 @@
 package bst;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
 
 public class TraversalExercises {
 
