@@ -9,7 +9,6 @@ import java.util.LinkedList;
 
 public class TraversalExercises {
 
-
     // Iterative preorder using a stack
     public static <T extends Comparable<T>> List<T> preorderIterative(TreeNode<T> root) {
         List<T> result = new ArrayList<>();
