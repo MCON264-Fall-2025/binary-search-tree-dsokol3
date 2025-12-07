@@ -13,7 +13,7 @@ public class TraversalExercises {
         //   pop node, visit it, then push right child, then left child
         if (root == null) return result;
 
-        Stack<TreeNode<T>> stack = new Stack<>();
+        Deque<TreeNode<T>> stack = new ArrayDeque<>();
         stack.push(root);
 
         while (!stack.isEmpty()) {
@@ -37,7 +37,7 @@ public class TraversalExercises {
         // TODO: implement iterative inorder
         // Hint: use a pointer 'curr' and a stack:
         //   while (curr != null || !stack.isEmpty()) { ... }
-        Stack<TreeNode<T>> stack = new Stack<>();
+        Deque<TreeNode<T>> stack = new ArrayDeque<>();
         TreeNode<T> curr = root;
 
         while (curr != null || !stack.isEmpty()) {
@@ -63,8 +63,8 @@ public class TraversalExercises {
         // You may use two stacks, or one stack with a previous-node pointer.
         if (root == null) return result;
 
-        Stack<TreeNode<T>> s1 = new Stack<>();
-        Stack<TreeNode<T>> s2 = new Stack<>();
+        Deque<TreeNode<T>> s1 = new ArrayDeque<>();
+        Deque<TreeNode<T>> s2 = new ArrayDeque<>();
 
         s1.push(root);
 
