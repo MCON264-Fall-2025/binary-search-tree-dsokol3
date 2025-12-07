@@ -125,7 +125,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
             case INORDER: return inorderRecursive();
             case POSTORDER: return postorderRecursive();
             case LEVEL_ORDER: return levelOrder();
+            default:
+                throw new IllegalArgumentException("Unsupported traversal type: " + type);
         }
-        return new ArrayList<>(); // placeholder
     }
 }
