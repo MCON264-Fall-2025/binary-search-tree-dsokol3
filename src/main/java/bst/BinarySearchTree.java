@@ -105,7 +105,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             if(node.left!=null){
                 queue.add(node.left);
             }
-            if(node.right!=null){
+            if (node.right != null) {
                 queue.add(node.right);
             }
         }
