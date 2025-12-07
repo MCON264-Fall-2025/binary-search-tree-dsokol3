@@ -99,7 +99,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
         Queue<TreeNode<T>> queue = new LinkedList<>();
         queue.add(root);
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()){
             TreeNode<T> node = queue.poll();
             result.add(node.value);
             if(node.left!=null){
