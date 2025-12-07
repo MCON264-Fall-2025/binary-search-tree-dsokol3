@@ -59,7 +59,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     private void inorderRecursive(TreeNode<T> node, List<T> out) {
         // TODO: implement Inorder: Left -> Root -> Right
-        if(node == null) {
+        if (node == null) {
             return;
         }
         inorderRecursive(node.left, out);
