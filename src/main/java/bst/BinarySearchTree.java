@@ -94,7 +94,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         //      - dequeue node
         //      - add node.value to result
         //      - enqueue children if not null (left then right)
-        if(root==null){
+        if (root == null) {
             return result;
         }
         Queue<TreeNode<T>> queue = new LinkedList<>();
