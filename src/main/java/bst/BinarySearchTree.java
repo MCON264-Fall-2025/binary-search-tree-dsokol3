@@ -75,7 +75,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     private void postorderRecursive(TreeNode<T> node, List<T> out) {
         // TODO: implement Postorder: Left -> Right -> Root
-        if(node == null) {
+        if (node == null) {
             return;
         }
         postorderRecursive(node.left, out);
